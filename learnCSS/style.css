@@ -1,0 +1,61 @@
+h1 {
+    font-size: 1rem;
+}
+h2 {
+    font-size: 1rem;
+}
+
+/*selector de atributo*/
+/*cualquier cosa que tenga el atributo name con cualquier valor*/
+[name] {
+}
+
+/*cualquier cosa que tenga el atributo name="foo" */
+[name='foo'] {
+}
+
+/* cualquier clase que en su nombre contenga el valor witget */
+[class*='witget'] {
+}
+
+section ~ p {
+    color: brown;
+}
+
+section + p {
+    font-style: italic;
+}
+
+/*pseudo elemento, ya sabe a que se refiere, en este caso se aplica a la primera letra de todos los parrafos*/
+p::first-letter {
+}
+
+/*para la primera letra de todas las lineas*/
+::first-letter {
+    font-size: 4rem;
+}
+
+/*generar contenido en el css que no estan en el html*/
+h1::before {
+    content: 'añadido';
+}
+
+h1::after {
+    content: 'añadido';
+}
+
+/*pseudo clases, alguien pertenece a una clase no porque lo digas, sino por su estado o circunstacia*/
+/*cuando esta el raton por encima, la clase de que el raton esta encima de un parrafo*/
+p:hover {
+}
+
+/*el segundo parrafo de un tipo de cosas*/
+/*(secuencia)*/
+/*a todos los parrafos que ocupen una posicion par*/
+/*para que en una lista, se diferencie uno de otro, le ponemos un color de fondo distinto a los pares*/
+p:nth-of-type(2n) {
+}
+
+/*cualquier cosa que este vacia por ejemplo <div><div>*/
+:empty {
+}
